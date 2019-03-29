@@ -1,0 +1,27 @@
+<!<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script> 
+	//
+fetch('http://localhost/Quezada/ProbandoJS/WebServiceDesdeJavaScript/json.php')
+.then((respuesta)=> {
+return respuesta.json();
+
+}).then((respuesta)=>{
+document.getElementById('nombre').value=respuesta.name;
+document.getElementById('apellido').value=respuesta.lastName;	
+})
+
+
+
+</script>
+</head>
+<body>
+<h1>hola</h1>
+<div id="informacion">
+<input type="text" name="nombre" id="nombre" value="Cargando...">
+<input type="text" name="apellido" id="apellido" value="Cargando...">
+</div>
+</body>
+</html>
